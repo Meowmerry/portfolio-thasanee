@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+        <title>MyResume</title>
+    </head>
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+        <link rel="stylesheet" href="css/stly.css">
+    <body>
+            <style>
+                    body {
+                      background-color: rgb(200, 182, 202);
+                      color: black;
+                    }
+                    
+                    /* On screens that are 992px wide or less, the background color is blue */
+                    @media screen and (max-width: 992px) {
+                      body {
+                        background-color: rgb(88, 86, 88);
+                        color: white;
+                      }
+                    }
+                    
+                    /* On screens that are 600px wide or less, the background color is olive */
+                    @media screen and (max-width: 600px) {
+                      body {
+                        background-color: olive;
+                        color: white;
+                      }
+                    }
+                    </style>
+
+    <div class="menubar">
+        <div class="container">
+                <div class="logo">
+                    <h1>MyResume</h1>
+                </div>
+                <ul class="menu">
+                    <li>
+                        <a href="#">Home</a>
+                    </li>                    
+                    <li>
+                        <a href="#">About</a>
+                    </li>                    
+                    <li>
+                        <a href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+    
+    <div class="header">
+        <div class="container">
+                
+                <img id="changeColor" src="img/Photoinfo.png" title="Click to change webpage color" alt=" style="style="max-width:100%;height:auto;">
+                <script>
+                 const changeColor = document.getElementById('changeColor'),
+                        colors      = ['pink', 'green', 'grey','tan'];
+                        let   colorIndex  = 0;
+
+                        changeColor.addEventListener('click', () => {
+                        document.body.style.backgroundColor = colors[colorIndex];      
+                        colorIndex = (colorIndex + 1) % colors.length
+                        });
+                </script>             
+
+                <div class="header_area">
+                
+                    <h1 id="changename" onclick="mynameFunction()" title="Click on the name to change!">THASANEE    PUTTAMADILOK</h1>
+                   
+                    <script>
+                    function mynameFunction() {
+                    var name;
+                    var username = prompt("Please enter the name:", "Thasanee Puttamadilok");
+                    if (username == null || username == "") {
+                    name = "User cancelled the prompt.";
+                    } else {
+                    name = username;
+                    }
+                    document.getElementById("changename").innerHTML = name;
+                     }
+                    </script>
+
+                    <h2 >Nickname : Meow</h2>
+                    <h3 >EXPORT OFFICER<h3>
+                    <br>
+        
+                    <h4><<---Chick my photo to change webpage background</h3>
+                </div>
+            </div>
+        </div>
+
+        <section class="aboutMe" >
+                <div class="container">
+                <div class="aboutMe_area">
+                    <div class="aboutMe_text">
+                     <div class="column1">
+                    <div class="row">
+                                               
+                    <h2 >ALL ABOUT ME:</h2>
+                    <p >A Planning and Sales Marketing professional with an exposure of 13 years in providing exceptional planning sales and Marketing in performs my tasks with outstanding working skills is Especially skilled at building effective, productive working relationships with clients and staff. </p>
+                    <h2>ACCOMPLISHMENTS:</h2>
+                    <ul>
+      
+                        <li>Excellent management, negotiation and public relations skills. </li>
+                        <li>Seeking a challenging management position in the customer service field that offers extensive contact with the public.</li>
+                        <li>Energetic self-starter with excellent analytical, organizational, and creative skills.</li>
+                      </ul>  
+                                
+                      <h2>MAJOR AND COMPUTER SKILLS:</h2>
+
+                      <input type="text" id="myInput" placeholder="New skill">
+                      <br></br>
+                      <button onclick="newElement()" class="addBtn">Add Skills</button>
+                      <button onclick="removeFromList()" class="addBtn">REMOVE SKILLS</button>
+                      <br>
+                     
+                    <ul id="myUL">
+                      <li>Good skill in English and know Spanish.</li>
+                      <li>Strategic sales & Marketing campaigns.</li>
+                      <li>Microsoft Word, Excels, Adobe Photoshop, Power Point, E-mails, Internet.</li>
+                      <li>Strong Sales presentations / Closing success"</li>
+                      <li>HTML, CSS, JavaScript</li>                                 
+                 </ul>
+
+                 <script>
+                        // Create a new list item when clicking on the "Add" button
+                               function newElement() {
+                                   var li = document.createElement("li");
+                                   var inputValue = document.getElementById("myInput").value;
+                                   var t = document.createTextNode(inputValue);
+                                   li.appendChild(t);
+                                   if (inputValue === '') {
+                                       alert("You must write something!");
+                                   } else {
+                                       document.getElementById("myUL").appendChild(li);
+                                   }
+                                   document.getElementById("myInput").value = "";
+
+                                    }
+        
+                                   function removeFromList(){
+                                       var list = document.getElementById("myUL");
+                                        list.removeChild(list.childNodes[0]);
+                                    }
+                           </script>
+
+                      <h2 >CONTACT INFO:</h2>
+                      <P>Mobile.: + 66 65 623 3306</P>
+                      <P>E-mail.: meow.uruguay@gmail com</p>
+                      <P>Adress.: 46 Asok-Din Daeng Rd, Bang Kapi, Huai Khwang, Bangkok 10310, Thailand.</P>
+                      <p><img src="img/ed.jpg" alt=" style="style="max-width:400px;height:205px;"></p>  
+                      <br>
+                      <p><img src="img/bgwork.jpg" alt=" style="style="max-width:400px;height:205px;"></p>  
+                      <p>
+
+                          <p>
+                          Video courtesy of 
+                          <a href="https://www.youtube.com/watch?v=lgT_XvJgPNs&t=8s" target="_blank">Video Interview in Spanish</a>.
+                          </p> 
+                          <br>
+                            </div>
+                             </div>
+                            </div>
+                        </div>
+                     </div>     
+                </section>
+                
+                <section class="experienc">
+                        <div class="container">
+                            <div class="experience_area">
+                                <div class="experience_text">
+                                  <div class="column2">
+                                   <div id="bg">
+                     <h2>EXPERIENCE  : </h2></div>
+                           
+                     <h3 >EXPORT OFFICE</h3>
+                        <h4>MASTERPAC ASIA THAILAND,  2012  to 2017 </h4>
+                             <ul>
+                                <li>Finding new customers and service our customer.</li>
+                                <li>Maintaining a superior service standard, conceptualizing and implementing new and improved service standard.</li>
+                                <li>Implement Marketing & Sales Plan for new and existing business expansions - demand .</li>
+                                <li>Onsite with engineer team, visit customer on oversea, Laos, Vietnam, Cambodia, Myanmar….</li>
+                                <li>Finding new customers and service our customer.</li>
+                                <li>Responsible for achieving sale target and controlling budget.</li>
+                                <li>Follow up on the Customer & Sales and Supply Chain process.</li>
+                                <li>Process Invoice Packing list for logistics service transfer shipping business.</li>
+                                </ul>  
+                                <h3>SALE REPRESENTATIVE :</h3>
+                                <h4>DTK AD, LIMITED COMPANY,  2006 to 2011 </h4>
+
+                    <ul>
+                        <li>Finding sales opportunity and find new customer and service our customer..</li>
+                        <li>Responsible for achieving sale target and controlling budget.</li>
+                        <li>Follow up on the Customer & Sales and Supply Chain process.</li>
+                        <li>Communicating with shipping agencies and oversea clients Control delivery quality of Products.</li>
+                        <li>Maintained monthly inventory Coordinating with other departments.</li>
+                        <li>Responsible for achieving sale target and controlling budget.</li>
+                        <li>Find an event and exhibition to promote products to market, trading products from Japan to Thai market..</li>
+                      </ul> 
+                      <div id="bg">
+                      <h2>EDUCATION : </h2></div>
+                    <h3>Texas Success Academy,</h3>
+                    <h3>Private High School in Texas USA.</h3>
+                    <h4>High School Degree, 2019 </h4>
+                    <ul>
+                    <li>Graduated with Information and Technology.</li>
+                    <li>GPA.: 3.70 </li> 
+                    </ul>
+                    <h3>Ramkhamhaeng University</h3>
+                    <h4>Bachelor Degree of Business Administration, 2006 </h4>
+                    <ul>
+                    <li>Graduated with General Management.</li>
+                    <li>GPA.: 2.62 </li>
+            
+                        </ul> 
+                    
+                     
+                    </div>
+                </div> 
+             </div>
+            </div>
+        </section>
+
+        <div class="clearfix"></div>
+
+        <section class="container">
+
+            <div class="contact">
+                <div class="contact_area">
+                    <h1>Contact Us</h1>
+                    <form>
+                        <label>Your Name</label><br>
+                        <input type="text" placeholder="Your Name"><br></br></br>
+                        </br><label>Your Email</label><br>
+                        <input type="email" placeholder="Your Email"><br><br></br></br>
+                        <label>Your Subject</label><br>
+                        <input type="text" placeholder="Your Subject"><br><br></br></br>
+                        <label>Your Message</label><br>
+                        <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea><br><br>
+                        <button>send</button><br>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+                <p>Copyright &copy; 2017 | THASANEE</p>
+        </footer>   
+        
+        
+
+</body>
+</html>
